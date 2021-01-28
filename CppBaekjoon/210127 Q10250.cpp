@@ -1,7 +1,5 @@
 #include <iostream>
 
-// INCOMPLETE
-
 int main()
 {
     size_t t;
@@ -14,6 +12,7 @@ int main()
     {
         std::cin >> h >> w >> n;
         result[i] = (n / h + 1) + (n % h) * 100;
+        if (n % h == 0) result[i] += 100 * h - 1;
     }
 
     for (size_t i = 0; i < t; i++)
