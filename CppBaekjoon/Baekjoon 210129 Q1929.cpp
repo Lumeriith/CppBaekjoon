@@ -6,7 +6,7 @@ int main()
     unsigned int m, n;
     std::cin >> m >> n;
 
-    bool sieve[n + 1];
+    bool *sieve = new bool[n + 1];
 
     for (size_t i = 0; i < n + 1; i++)
         sieve[i] = false;
@@ -31,4 +31,6 @@ int main()
         if (!sieve[i])
             std::cout << i << '\n';
     }
+
+    delete[] sieve;
 }
